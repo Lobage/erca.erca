@@ -1,0 +1,38 @@
+RCA framework
+=============
+
+0) Requirements
+
+You need to have Java > 1.5.0 installed on your system.
+
+1) Installation
+
+Just unzip the erca.zip archive.
+
+2) Usage
+
+The main command is:
+
+java -jar erca.jar
+
+Arguments for this command are:
+
+clfdot src tgt
+	description: generate a dot file in tgt corresponding to the given (src) concept lattice family
+	example: clfdot test.clf.xmi test.clf.dot
+	
+clfbuild --rcft src xmi tgt
+	description: generate the XMI (xmi) and the concept lattice family (tgt) corresponding to the given relational context family (src) in the rcft format
+	example: clfbuild --rcft test.rcft test.rcf.xmi test.clf.xmi
+	
+clfbuild --xmi src tgt
+	description: generate the concept lattice family (tgt) corresponding to the given relational context family (src) in the xmi format
+	example: clfbuild --xmi test.rcf.xmi test.clf.xmi
+	
+rcfhtml --rcft src tgt
+	description: generate the HTML code in tgt corresponding to the given relational context family (src) in the rcft format
+	example: rcfhtml --rcft test.rcft test.rcf.html
+	
+rcfhtml --xmi src tgt
+	description: generate the HTML code in tgt corresponding to the given relational context family (src) in the xmi format
+	example: rcfhtml --xmi test.rcf.xmi test.rcf.html 

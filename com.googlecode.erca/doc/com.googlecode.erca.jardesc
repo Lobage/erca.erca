@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="com.googlecode.erca/lib/com.googlecode.erca.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/com.googlecode.erca/doc/com.googlecode.erca.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/com.googlecode.erca/doc/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <folder path="/com.googlecode.erca/META-INF"/>
+        <file path="/com.googlecode.erca/plugin.xml"/>
+        <javaElement handleIdentifier="=com.googlecode.erca/src"/>
+        <file path="/com.googlecode.erca/plugin.properties"/>
+        <file path="/com.googlecode.erca/.classpath"/>
+        <folder path="/com.googlecode.erca/doc"/>
+        <file path="/com.googlecode.erca/.project"/>
+        <folder path="/com.googlecode.erca/model"/>
+        <file path="/com.googlecode.erca/build.properties"/>
+    </selectedElements>
+    <fatjar builder="org.eclipse.jdt.ui.plain_jar_builder" launchConfig=""/>
+</jardesc>

@@ -1,0 +1,42 @@
+FormalContext class
+|		|
+|Classe	|
+|Promo	|
+|Personne	|
+|Etudiant	|
+|Eleve	|
+|ContratApprentissage	|
+
+FormalContext property
+|		|name: etudiants	|name: eleves	|name: niveau	|name: numero	|name: nom	|name: apprenti	|
+|etudiants	|x		|		|		|		|		|		|
+|eleves	|		|x		|		|		|		|		|
+|niveau	|		|		|x		|		|		|		|
+|numero	|		|		|		|x		|		|		|
+|nom	|		|		|		|		|x		|		|
+|apprenti	|		|		|		|		|		|x		|
+
+RelationalContext owns
+source class
+target property
+scaling fr.lirmm.rca.framework.algo.scaling.Wide 
+|		|etudiants	|eleves	|niveau	|numero	|nom	|apprenti	|
+|Classe	|x		|		|		|		|		|		|
+|Promo	|		|x		|		|		|		|		|
+|Personne	|		|		|		|		|x		|		|
+|Etudiant	|		|		|		|x		|x		|		|
+|Eleve	|		|		|x		|		|x		|		|
+|ContratApprentissage	|		|		|		|		|		|x		|
+
+RelationalContext type
+source property
+target class
+scaling fr.lirmm.rca.framework.algo.scaling.Wide 
+|		|Classe	|Promo	|Personne	|Etudiant	|Eleve	|ContratApprentissage	|
+|etudiants	|		|		|		|x		|		|		|
+|eleves	|		|		|		|		|x		|		|
+|niveau	|		|		|		|		|		|		|
+|numero	|		|		|		|		|		|		|
+|nom	|		|		|		|		|		|		|
+|apprenti	|		|		|		|x		|		|		|
+

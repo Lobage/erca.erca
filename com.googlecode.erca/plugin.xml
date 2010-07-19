@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://code.google.com/erca/erca.ecore/1.5.0" 
+       class = "com.googlecode.erca.ErcaPackage"
+       genModel = "model/erca.genmodel" /> 
+  </extension>
+
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://code.google.com/erca/erca.ecore/1.5.0#//rcf" 
+       class = "com.googlecode.erca.rcf.RcfPackage"
+       genModel = "model/erca.genmodel" /> 
+  </extension>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://code.google.com/erca/erca.ecore/1.5.0#//clf" 
+       class = "com.googlecode.erca.clf.ClfPackage"
+       genModel = "model/erca.genmodel" /> 
+  </extension>
+
+  
+  <extension point="org.eclipse.ui.popupMenus">
+    <objectContribution
+          id="erca.rcf.exportmenuobject"
+          nameFilter="*.rcf"
+          objectClass="org.eclipse.core.resources.IFile">
+        <menu id="erca.rcf.exportmenu" label="Rcf Export" path="additions">
+           <separator
+                 name="actions">
+           </separator>
+        </menu>
+        <action
+              class="com.googlecode.erca.plugin.popup.actions.RcfToXhtmlAction"
+              enablesFor="1"
+              id="erca.rcf.xhtmlexport"
+              label="Export RCF To XHTML"
+              menubarPath="erca.rcf.exportmenu/actions">
+        </action>
+        <action
+              class="com.googlecode.erca.plugin.popup.actions.RcfToLatexAction"
+              enablesFor="1"
+              id="com.googlecode.erca.action1"
+              label="Export RCF To LaTeX"
+              menubarPath="erca.rcf.exportmenu/actions">
+        </action>
+     </objectContribution>
+    <objectContribution
+          id="erca.clf.exportmenuobject"
+          nameFilter="*.clf"
+          objectClass="org.eclipse.core.resources.IFile">
+       <menu
+             id="erca.clf.exportmenu"
+             label="Clf Export"
+             path="additions">
+          <separator
+                name="actions">
+          </separator>
+       </menu>
+       <action
+             class="com.googlecode.erca.plugin.popup.actions.ClfToDotAction"
+             enablesFor="1"
+             id="erca.action.dotexport"
+             label="Export CLF To Dot"
+             menubarPath="erca.clf.exportmenu/actions">
+       </action>
+    </objectContribution>
+    <objectContribution
+          id="erca.rcft.exportmenuobject"
+          nameFilter="*.rcft"
+          objectClass="org.eclipse.core.resources.IFile">
+       <menu
+             id="erca.rcft.exportmenu"
+             label="Rcft Export"
+             path="additions">
+          <separator
+                name="actions">
+          </separator>
+       </menu>
+       <action
+             class="com.googlecode.erca.plugin.popup.actions.RcftToRcfAction"
+             enablesFor="1"
+             id="erca.rcft.xmiexport"
+             label="Export RCFT To XMI"
+             menubarPath="erca.rcft.exportmenu/actions">
+       </action>
+    </objectContribution>
+  </extension>
+
+</plugin>

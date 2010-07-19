@@ -1,0 +1,14 @@
+FormalContext testFormalContext
+|		| a1:cool	| a2	| a3 : essai	|
+| e1	| x			|		|				|
+| e2	|			| x		| x				|
+| e3	| x			|		| x				|
+
+RelationalContext testRelationalContext
+source testFormalContext
+target testFormalContext
+scaling com.googlecode.erca.framework.algo.scaling.Narrow
+| 		| e1 	| e2	| e3	|
+| e1	| 		| x		| x		|
+| e2	| x		| x		| x		|
+| e3	| 		| x		|		|

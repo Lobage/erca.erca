@@ -1,0 +1,17 @@
+FormalContext class
+|		 		|
+| Element		|
+| CodeElement	|
+
+FormalContext property
+|				| #name	| #qualified_name |
+| name  		| x 		| 					 |
+| qualifiedName	| x 		| x |
+
+RelationalContext owns
+source class
+target property
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|				| name	| qualifiedName	|
+| Element		| x		|				|
+| CodeElement	|		| x				|

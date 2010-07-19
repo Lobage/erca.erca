@@ -1,0 +1,33 @@
+FormalContext class
+|				| name:piece 	| name:classe	 	| name:promo	 	| name: personne | name: etudiant | name: eleve |
+| Piece			| x				|					|					| 				 |				 |				|
+| Classe		|				| x					|					|  				 |				 |				|
+| Promo			|				| 					| x					| 				 |				 |				|
+| Personne		|				| 					| 					|  		x		 |				 |				|
+| Etudiant		|				| 					| 					| 				 |		x		 |				|
+| Eleve			|				| 					| 					|   			 |				 |		x		|	
+
+FormalContext property
+|			| name: personnes	| name: etudiants	|  name: eleves		|
+| personnes	| x					|					|					|
+| etudiants	| 					| 		x			|					|
+| eleves	| 					| 					| x					|
+
+RelationalContext owns
+source class
+target property
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|			| personnes 	| etudiants		| eleves  |
+| Piece		| 	x			|				|		  |
+| Classe	|				| x				|		  |
+| Promo		|				| 				|	x	  |
+
+RelationalContext type
+source property
+target class
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|				| Personne 		| Etudiant		|  Eleve |
+| personnes		| x				|				|		 |
+| etudiants		| 				| 		x		|		 |			
+| eleves		| 				| 				|	x	 |
+

@@ -1,0 +1,125 @@
+FormalContext MetamodelElement
+|		|Role	|Attribute_2	|Attribute_3	|Attribute_4	|Attribute_5	|
+|Role	|x		|		|		|		|		|
+|Cardinality	|		|x		|		|		|		|
+|RelationShip	|		|		|x		|		|		|
+|Entity	|		|		|		|x		|		|
+|Attribute	|		|		|		|		|x		|
+
+FormalContext ModelElementB
+|		|
+|Compte	|
+|numero	|
+|Client	|
+|nom	|
+|possession	|
+|possesseur	|
+|possede	|
+|card1	|
+|card2	|
+
+RelationalContext relationship
+source ModelElementB
+target ModelElementB
+scaling com.googlecode.erca.framework.algo.scaling.Wide 
+|		|Compte	|numero	|Client	|nom	|possession	|possesseur	|possede	|card1	|card2	|
+|Compte	|		|		|		|		|		|		|		|		|		|
+|numero	|		|		|		|		|		|		|		|		|		|
+|Client	|		|		|		|		|		|		|		|		|		|
+|nom	|		|		|		|		|		|		|		|		|		|
+|possession	|		|		|		|		|		|		|x		|		|		|
+|possesseur	|		|		|		|		|		|		|x		|		|		|
+|possede	|		|		|		|		|		|		|		|		|		|
+|card1	|		|		|		|		|		|		|		|		|		|
+|card2	|		|		|		|		|		|		|		|		|		|
+
+RelationalContext entity
+source ModelElementB
+target ModelElementB
+scaling com.googlecode.erca.framework.algo.scaling.Wide 
+|		|Compte	|numero	|Client	|nom	|possession	|possesseur	|possede	|card1	|card2	|
+|Compte	|		|		|		|		|		|		|		|		|		|
+|numero	|x		|		|		|		|		|		|		|		|		|
+|Client	|		|		|		|		|		|		|		|		|		|
+|nom	|		|		|x		|		|		|		|		|		|		|
+|possession	|		|		|		|		|		|		|		|		|		|
+|possesseur	|		|		|		|		|		|		|		|		|		|
+|possede	|		|		|		|		|		|		|		|		|		|
+|card1	|		|		|		|		|		|		|		|		|		|
+|card2	|		|		|		|		|		|		|		|		|		|
+
+RelationalContext attribute
+source ModelElementB
+target ModelElementB
+scaling com.googlecode.erca.framework.algo.scaling.Wide 
+|		|Compte	|numero	|Client	|nom	|possession	|possesseur	|possede	|card1	|card2	|
+|Compte	|		|x		|		|		|		|		|		|		|		|
+|numero	|		|		|		|		|		|		|		|		|		|
+|Client	|		|		|		|x		|		|		|		|		|		|
+|nom	|		|		|		|		|		|		|		|		|		|
+|possession	|		|		|		|		|		|		|		|		|		|
+|possesseur	|		|		|		|		|		|		|		|		|		|
+|possede	|		|		|		|		|		|		|		|		|		|
+|card1	|		|		|		|		|		|		|		|		|		|
+|card2	|		|		|		|		|		|		|		|		|		|
+
+RelationalContext role
+source ModelElementB
+target ModelElementB
+scaling com.googlecode.erca.framework.algo.scaling.Wide 
+|		|Compte	|numero	|Client	|nom	|possession	|possesseur	|possede	|card1	|card2	|
+|Compte	|		|		|		|		|x		|		|		|		|		|
+|numero	|		|		|		|		|		|x		|		|		|		|
+|Client	|		|		|		|		|		|		|		|		|		|
+|nom	|		|		|		|		|		|		|		|		|		|
+|possession	|		|		|		|		|		|		|		|		|		|
+|possesseur	|		|		|		|		|		|		|		|		|		|
+|possede	|		|		|		|		|x		|x		|		|		|		|
+|card1	|		|		|		|		|x		|		|		|		|		|
+|card2	|		|		|		|		|		|x		|		|		|		|
+
+RelationalContext metaclasse
+source ModelElementB
+target MetamodelElement
+scaling com.googlecode.erca.framework.algo.scaling.Wide 
+|		|Role	|Cardinality	|RelationShip	|Entity	|Attribute	|
+|Compte	|		|		|		|x		|		|
+|numero	|		|		|		|		|x		|
+|Client	|		|		|		|x		|		|
+|nom	|		|		|		|		|x		|
+|possession	|x		|		|		|		|		|
+|possesseur	|x		|		|		|		|		|
+|possede	|		|		|x		|		|		|
+|card1	|		|x		|		|		|		|
+|card2	|		|x		|		|		|		|
+
+RelationalContext refersTo
+source ModelElementB
+target ModelElementB
+scaling com.googlecode.erca.framework.algo.scaling.Wide 
+|		|Compte	|numero	|Client	|nom	|possession	|possesseur	|possede	|card1	|card2	|
+|Compte	|		|		|		|		|x		|		|		|		|		|
+|numero	|		|		|		|		|		|		|		|		|		|
+|Client	|		|		|		|		|		|x		|		|		|		|
+|nom	|		|		|		|		|		|		|		|		|		|
+|possession	|		|		|		|		|		|		|		|		|		|
+|possesseur	|		|		|		|		|		|		|		|		|		|
+|possede	|		|		|		|		|		|		|		|		|		|
+|card1	|		|		|		|		|		|		|		|		|		|
+|card2	|		|		|		|		|		|		|		|		|		|
+
+RelationalContext cardinality
+source ModelElementB
+target ModelElementB
+scaling com.googlecode.erca.framework.algo.scaling.Wide 
+|		|Compte	|numero	|Client	|nom	|possession	|possesseur	|possede	|card1	|card2	|
+|Compte	|		|		|		|		|		|		|		|		|		|
+|numero	|		|		|		|		|		|		|		|		|		|
+|Client	|		|		|		|		|		|		|		|		|		|
+|nom	|		|		|		|		|		|		|		|		|		|
+|possession	|		|		|		|		|		|		|		|x		|		|
+|possesseur	|		|		|		|		|		|		|		|		|x		|
+|possede	|		|		|		|		|		|		|		|		|		|
+|card1	|		|		|		|		|		|		|		|		|		|
+|card2	|		|		|		|		|		|		|		|		|		|
+

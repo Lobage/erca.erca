@@ -1,0 +1,29 @@
+FormalContext class
+|		| name:A 	| name:B	 	|
+| A		| x			|				|
+| B		|			| x				|
+
+
+FormalContext property
+|		| name: p1			| name: p2			| 
+| p1	| x					|					|
+| p2	| 					| 		x			| 
+
+RelationalContext owns
+source class
+target property
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|		| p1 		| p2 			|
+| A		| 			|				|
+| B		|	x		| x				|
+
+
+
+RelationalContext type
+source property
+target class
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|		| A 		| B				| 
+| p1	| x			|				|
+| p2	| x			| 				|
+

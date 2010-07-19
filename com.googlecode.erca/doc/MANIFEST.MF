@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.googlecode.erca.framework.cli.RcaLauncher
+Class-Path: lib/com.googlecode.exputils.jar lib/org.eclipse.emf.ecore.jar lib/org.eclipse.emf.common.jar lib/org.eclipse.emf.ecore.xmi.jar lib/org.apache.commons.logging.jar

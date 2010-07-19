@@ -1,0 +1,39 @@
+FormalContext class
+||
+| BasicAccount|
+| TeenagerAccount|
+| BasicAccountHolder|
+| TeenagerClient	|
+
+
+FormalContext property
+|		| (name,balance)| (name,maxwithdrawal) | (name,overdraft) |(name,bAccountList)	| (name,tAccountList)	|
+| BasicAccount.balance	| x				|				|				|||
+| TeenagerAccount.balance	| x				| 				| 				|||
+| maxwithdrawal | | x | |||	
+| overdraft | | | x |||
+| bAccountList	| 				| 			| 				|	x||	
+| tAccountList	| 				|				| 			||x|
+
+RelationalContext owns
+source class
+target property
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|		| BasicAccount.balance 	| TeenagerAccount.balance 	| maxwithdrawal | overdraft | bAccountList	| tAccountList |
+| BasicAccount	| x		|		|		|	x	|||
+| TeenagerAccount	|		| x		| 	x	|		|||
+| BasicAccountHolder	| 		|		| 		|		|x||
+| TeenagerClient	| 		|		| 		|		||x|
+
+
+RelationalContext type
+source property
+target class
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|		| BasicAccount 	| TeenagerAccount	| BasicAccountHolder	|	TeenagerClient	|
+| TeenagerAccount.balance	| 		|		|		|		|
+| TeenagerAccount.balance	|		| 		| 		|		|
+| maxwithdrawal	|		| 		| 		|		|
+| overdraft	|		| 		| 		|		|
+| bAccountList	| 	x	|		| 		|		|
+|  tAccountList	| 		|	x	| 		|		|

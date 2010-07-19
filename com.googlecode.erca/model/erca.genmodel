@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.googlecode.erca/src"
+    editDirectory="/com.googlecode.rca.edit/src" modelPluginID="com.googlecode.erca"
+    modelName="Erca" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false">
+  <foreignModel>erca.ecore</foreignModel>
+  <genPackages prefix="Erca" basePackage="com.googlecode" disposableProviderFactory="true"
+      ecorePackage="erca.ecore#/">
+    <genClasses image="false" ecoreClass="erca.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erca.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="erca.ecore#//Entity"/>
+    <genClasses image="false" ecoreClass="erca.ecore#//Attribute">
+      <genOperations ecoreOperation="erca.ecore#//Attribute/getDescription"/>
+      <genOperations ecoreOperation="erca.ecore#//Attribute/sameAs">
+        <genParameters ecoreParameter="erca.ecore#//Attribute/sameAs/attr"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="erca.ecore#//FcaElement"/>
+    <genClasses ecoreClass="erca.ecore#//BinaryAttribute"/>
+    <genClasses ecoreClass="erca.ecore#//ValuedAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erca.ecore#//ValuedAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erca.ecore#//CompositeAttribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//CompositeAttribute/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="erca.ecore#//RelationalAttribute"/>
+    <nestedGenPackages prefix="Clf" disposableProviderFactory="true" ecorePackage="erca.ecore#//clf">
+      <genClasses ecoreClass="erca.ecore#//clf/Concept">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference erca.ecore#//clf/Concept/lattice"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//clf/Concept/children"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//clf/Concept/extent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//clf/Concept/intent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erca.ecore#//clf/Concept/creationStep"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/getSimplifiedExtent"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/getAllParents"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/getSimplifiedIntent"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/getParents"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/getAllChildren"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/isFusion"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/isNewConcept"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/Concept/isDummy"/>
+      </genClasses>
+      <genClasses ecoreClass="erca.ecore#//clf/ConceptLattice">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//clf/ConceptLattice/attributes"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//clf/ConceptLattice/top"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//clf/ConceptLattice/concepts"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/ConceptLattice/deleteAttribute">
+          <genParameters ecoreParameter="erca.ecore#//clf/ConceptLattice/deleteAttribute/attribute"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//clf/ConceptLattice/getAttribute">
+          <genParameters ecoreParameter="erca.ecore#//clf/ConceptLattice/getAttribute/attr"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//clf/ConceptLattice/getConcept">
+          <genParameters ecoreParameter="erca.ecore#//clf/ConceptLattice/getConcept/name"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//clf/ConceptLattice/getConceptsByDFS"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/ConceptLattice/getConceptsByBFS"/>
+      </genClasses>
+      <genClasses ecoreClass="erca.ecore#//clf/ConceptLatticeFamily">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//clf/ConceptLatticeFamily/conceptLattices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erca.ecore#//clf/ConceptLatticeFamily/stepNumber"/>
+        <genOperations ecoreOperation="erca.ecore#//clf/ConceptLatticeFamily/getConceptLattice">
+          <genParameters ecoreParameter="erca.ecore#//clf/ConceptLatticeFamily/getConceptLattice/name"/>
+        </genOperations>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Rcf" disposableProviderFactory="true" ecorePackage="erca.ecore#//rcf">
+      <genClasses ecoreClass="erca.ecore#//rcf/Pair">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//rcf/Pair/target"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//rcf/Pair/source"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="erca.ecore#//rcf/BinaryContext">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//rcf/BinaryContext/relation"/>
+        <genOperations ecoreOperation="erca.ecore#//rcf/BinaryContext/getTargetElements">
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/getTargetElements/element"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/BinaryContext/getSourceElements">
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/getSourceElements/element"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/BinaryContext/hasPair">
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/hasPair/source"/>
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/hasPair/target"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/BinaryContext/addPair">
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/addPair/source"/>
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/addPair/target"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/BinaryContext/removePair">
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/removePair/source"/>
+          <genParameters ecoreParameter="erca.ecore#//rcf/BinaryContext/removePair/target"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="erca.ecore#//rcf/RelationalContext">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//rcf/RelationalContext/targetEntities"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//rcf/RelationalContext/sourceEntities"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//rcf/RelationalContext/targetContext"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference erca.ecore#//rcf/RelationalContext/sourceContext"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erca.ecore#//rcf/RelationalContext/scalingOperator"/>
+        <genOperations ecoreOperation="erca.ecore#//rcf/RelationalContext/getTargetEntities">
+          <genParameters ecoreParameter="erca.ecore#//rcf/RelationalContext/getTargetEntities/entity"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/RelationalContext/getSourcesEntities">
+          <genParameters ecoreParameter="erca.ecore#//rcf/RelationalContext/getSourcesEntities/entity"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/RelationalContext/getTargetEntity">
+          <genParameters ecoreParameter="erca.ecore#//rcf/RelationalContext/getTargetEntity/name"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="erca.ecore#//rcf/FormalContext">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//rcf/FormalContext/attributes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//rcf/FormalContext/entities"/>
+        <genOperations ecoreOperation="erca.ecore#//rcf/FormalContext/getSourceEntities">
+          <genParameters ecoreParameter="erca.ecore#//rcf/FormalContext/getSourceEntities/attribute"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/FormalContext/getTargetAttributes">
+          <genParameters ecoreParameter="erca.ecore#//rcf/FormalContext/getTargetAttributes/entity"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/FormalContext/getEntity">
+          <genParameters ecoreParameter="erca.ecore#//rcf/FormalContext/getEntity/name"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/FormalContext/getAttribute">
+          <genParameters ecoreParameter="erca.ecore#//rcf/FormalContext/getAttribute/attr"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="erca.ecore#//rcf/RelationalContextFamily">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//rcf/RelationalContextFamily/relationalContexts"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erca.ecore#//rcf/RelationalContextFamily/formalContexts"/>
+        <genOperations ecoreOperation="erca.ecore#//rcf/RelationalContextFamily/getRelationalContext">
+          <genParameters ecoreParameter="erca.ecore#//rcf/RelationalContextFamily/getRelationalContext/name"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/RelationalContextFamily/getFormalContext">
+          <genParameters ecoreParameter="erca.ecore#//rcf/RelationalContextFamily/getFormalContext/name"/>
+        </genOperations>
+        <genOperations ecoreOperation="erca.ecore#//rcf/RelationalContextFamily/getRelationalContexts">
+          <genParameters ecoreParameter="erca.ecore#//rcf/RelationalContextFamily/getRelationalContexts/formalContext"/>
+        </genOperations>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

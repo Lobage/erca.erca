@@ -1,0 +1,10 @@
+2009-02-05	Jean-Rémy Falleri	<jr.falleri@laposte.net>
+
+  * Added RelationalAttribute kind of attributes.
+  * Added options in LatticeToDot.
+  * Added FormalContextToLatex class.
+  * Mutualized code between LatticeToDot and ClfToDot classes by adding a generateCodeForClf method in LatticeToDot class.
+
+2009-01-29	Jean-Rémy Falleri	<jr.falleri@laposte.net>
+
+  * Initial commit of ChangeLog file. All changes performed on erca will be listed here.

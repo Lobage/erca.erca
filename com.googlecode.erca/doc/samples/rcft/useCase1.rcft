@@ -1,0 +1,67 @@
+FormalContext Actor
+|					|  theme:choco	|	
+| Administrator		| 		x		|		
+| standardUser		|		x		| 				
+| ExternalDB		| 		x		|			
+| ChocoMaker		| 		x		|
+
+ 
+FormalContext UseCase
+|				| n:ap|n:rp|n:mp|n:fc|n:c|n:ca|n:kc|n:ki|n:cp|n:ce|n:r|n:i|n:ei|n:rt|n:rc|n:pi|n:ti|n:re|n:in|
+| addPage		|x	| | | | | | | | | | | | | | | | | | |
+| removePage	| 	|x| | | | | | | | | | | | | | | | | |
+| modifyPage	|  	|  |x| | | | | | | | | | | | | | | | |
+| freeConsult	|  	|  | |x | | | | | | | | | | | | | | | |
+| comment		|  	|  | | |x | | | | | | | | | | | | | | |
+| commentAttach	|  	|  | | | |x | | | | | | | | | | | | | |
+| keywordConsult|  	|  | | | | |x | | | | | | | | | | | | |
+| keywordInput	|  	|  | | | | | |x | | | | | | | | | | | |
+| consultPrint	|  	|  | | | | | | |x | | | | | | | | | | |
+| consultEmail	| 	|  | | | | | | | |x | | | | | | | | | |
+| registrate	| 	|  | | | | | | | | |x | | | | | | | | |
+| identify		| 	|  | | | | | | | | | |x | | | | | | | |
+| emailInput	| 	|  | | | | | | | | | | |x | | | | | | |
+| registrateTh	|   |  | | | | | | | | | | | |x | | | | | |
+| registrateCl	|   |  | | | | | | | | | | | | |x | | | | |
+| periodInput	|   |  | | | | | | | | | | | | | |x | | | |
+| themeInput	|   |  | | | | | | | | | | | | | | |x | | |
+| registEmail	|   |  | | | | | | | | | | | | | | | |x | |
+| invoicing		|   |  | | | | | | | | | | | | | | | | |x |
+
+
+
+RelationalContext includes
+source UseCase
+target UseCase
+scaling com.googlecode.erca.framework.algo.scaling.Narrow
+|				| addPage|removePage|modifyPage|freeConsult|comment|commentAttach|keywordConsult|keywordInput|consultPrint|consultEmail|registrate|identify|emailInput|registrateTh|registrateCl|periodInput|themeInput|registEmail|invoicing|
+| addPage		|   |  | | | | | | | | | | | | | | | | | |
+| removePage	| 	|  | | | | | | | | | | | | | | | | | |
+| modifyPage	|  	|  | | | | | | | | | | | | | | | | | |
+| freeConsult	|  	|  | | | | | | |x | | | | | | | | | | |
+| comment		|  	|  | | | | | | | | | | | | | | | | | |
+| commentAttach	|  	|  | | | | | | | | | | | | | | | | | |
+| keywordConsult|  	|  | | | | | | |x | | | | | | | | | | |
+| keywordInput	|  	|  | | | | | | | | | | | | | | | | | |
+| consultPrint	|  	|  | | | | | | | | | | | | | | | | | |
+| consultEmail	| 	|  | | | | | | | | | | | | | | | | | |
+| registrate	| 	|  | | | | | | | | | | | | | | | | | |
+| identify		| 	|  | | | | | | | | | | | | | | | | | |
+| emailInput	| 	|  | | | | | | | | | | | | | | | | | |
+| registrateTh	|   |  | | | | | | | | | | | | | | | | | |
+| registrateCl	|   |  | | | | | | | | | | | | | | | | | |
+| periodInput	|   |  | | | | | | | | | | | | | | | | | |
+| themeInput	|   |  | | | | | | | | | | | | | | | | | |
+| registEmail	|   |  | | | | | | | | | | | | | | | | | |
+| invoicing		|   |  | | | | | | | | | | | | | | | | | |
+
+RelationalContext includes
+source Actor
+target UseCase
+scaling com.googlecode.erca.framework.algo.scaling.Narrow
+|				| addPage|removePage|modifyPage|freeConsult|comment|commentAttach|keywordConsult|keywordInput|consultPrint|consultEmail|registrate|identify|emailInput|registrateTh|registrateCl|periodInput|themeInput|registEmail|invoicing|
+| Administrator	|   |  | |x | | |x | | | | | | | | | | | | |
+| standardUser	|   |  | |x | | |x | | | | | | | | | | | | |				
+| ExternalDB	|   |  | | | | | | | | | | | | | | | | | |			
+| ChocoMaker	|   |  | |x | | |x | | | | | | | | | | | | |
+

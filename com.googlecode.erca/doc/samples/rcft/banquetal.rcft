@@ -1,0 +1,34 @@
+FormalContext class
+|		|
+| BA	|
+| TA	|
+| BAH	|
+| TC	|
+
+FormalContext property
+|		| name: balance		| name:lstBA		| name:lstTA		|
+| bBA	| x					|					|					|
+| bTA	| x					| 					| 					|	
+| lstBA	| 					| x					| 					|		
+| lstTA	| 					|					| x					|
+
+RelationalContext owns
+source class
+target property
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|		| bBA 		| bTA 			| lstBA			| lstTA 	|
+| BA	| x			|				|				|			|
+| TA	|			| x				| 				|			|
+| BAH	| 			|				| x				|			|
+| TC	| 			|				| 				|		x	|
+
+
+RelationalContext type
+source property
+target class
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|		| BA 		| TA			| BAH		 	|	TC			|
+| bBA	| 			|				|				|				|
+| bTA	|			| 				| 				|				|
+| lstBA	| 	x		|				| 				|				|
+| lstTA	| 			|		x		| 				|				|

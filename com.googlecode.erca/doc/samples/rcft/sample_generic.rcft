@@ -1,0 +1,17 @@
+FormalContext EClass
+||
+|Class|
+|Method|
+
+FormalContext EAttribute
+||(name,simpleName)|(name,qualifiedName)|
+|simpleName|x||
+|qualifiedName||x
+
+RelationalContext eAttributes
+source EClass
+target EAttribute
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+||simpleName|qualifiedName|
+|Class|x||
+|Method||x|

@@ -1,0 +1,40 @@
+FormalContext chercheurs
+|		|Genie Logiciel	|Statistiques	|Graphes|IA	|
+|Raluca	|				|				|		| x	|
+|Arthur	| x				|				|		| x	|
+|Olivier|				| x				|		|	|
+|Gilles	|				| x				|		|	|
+|Cecile	|				| x				|		|	|
+|Gerard	| x				|				| x		|	|
+|Sophie	|				| x				|		|	|
+|Laurent|				|				|		| x	|
+
+FormalContext journaux
+|										|Biologie	|Genie Logiciel	|Informatique Theorique	|
+|Nucleic Acids Research					| x			|				|						|
+|Transactions on Software Engineering	|			| x				|						|
+|Theoretical Computer Science			|			|				| x						|
+
+RelationalContext publie_dans
+source chercheurs
+target journaux
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|		|Nucleic Acids Research	|Transactions on Software Engineering	|Theoretical Computer Science	|
+|Raluca	| x						|										|								|
+|Arthur	|						| x										|								|
+|Olivier|						|										| x								|
+|Gilles	| x						|										|								|
+|Cecile	| x						|										|								|
+|Gerard	|						|										|								|
+|Sophie	| x						|										|								|
+|Laurent| x						|										|								|
+
+RelationalContext editeurs
+source journaux
+target chercheurs
+scaling com.googlecode.erca.framework.algo.scaling.Wide
+|										|Sophie	|Olivier|Arthur	|
+|Nucleic Acids Research					| x		|		|		|
+|Transactions on Software Engineering	|		|		| x		|
+|Theoretical Computer Science			| x		| x		|		|
+

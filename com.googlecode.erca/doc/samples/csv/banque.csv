@@ -1,0 +1,5 @@
+;"balance";"maxwithdrawal";"overdraft";"bAccountList";"tAccountList"
+"BasicAccount";"x";;"x";;
+"TeenagerAccount";"x";"x";;;
+"BasicAccountHolder";;;;"x";
+"TeenagerClient";;;;;"x"
