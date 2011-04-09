@@ -40,6 +40,12 @@ public class RcaLauncher {
 			System.out.println("clfbuild --xmi src tgt");
 			System.out.println("\tGenerate the concept lattice family (tgt) corresponding to the given relational context family (src) in the xmi format.");
 			System.out.println("----------");
+			System.out.println("clfbuild-debug --rcft src xmi tgt debugPath");
+			System.out.println("\tGenerate the XMI (xmi) and the concept lattice family (tgt) corresponding to the given relational context family (src) in the rcft format.");
+			System.out.println("----------");
+			System.out.println("clfbuild-debug --xmi src tgt debugPath");
+			System.out.println("\tGenerate the concept lattice family (tgt) corresponding to the given relational context family (src) in the xmi format.");
+			System.out.println("----------");
 			System.out.println("rcfhtml --rcft src tgt");
 			System.out.println("\tGenerate the HTML code in tgt corresponding to the given relational context family (src) in the rcft format.");
 			System.out.println("----------");
@@ -90,6 +96,32 @@ public class RcaLauncher {
 				RelationalContextFamily rcf = p.getRcf();
 				ErcaIO.saveErcaObject(rcf,xmi);
 				ClfGenerator clfgen = new ClfGenerator(rcf);
+				clfgen.generateClf();
+				clfgen.saveClf(tgt);
+			}
+		}
+		else if ( "clfbuild-debug".equals(cmd) ) {
+			String type = args[1];
+			String src = args[2];
+			
+			
+			if ( "--xmi".equals(type)) {
+				String tgt = args[3];
+				String debugPath= args[4];
+				ClfGenerator clfgen = new ClfGenerator(src,-1,true,debugPath);
+				clfgen.generateClf();
+				clfgen.saveClf(tgt);
+			}
+			else if ( "--rcft".equals(type) ) {
+				String xmi = args[3];
+				String tgt = args[4];
+				String debugPath= args[5];
+				System.out.println("Building lattices for ");
+				RcftParser p = new RcftParser(src);
+				p.parse();
+				RelationalContextFamily rcf = p.getRcf();
+				ErcaIO.saveErcaObject(rcf,xmi);
+				ClfGenerator clfgen = new ClfGenerator(xmi,-1,true,debugPath);
 				clfgen.generateClf();
 				clfgen.saveClf(tgt);
 			}
